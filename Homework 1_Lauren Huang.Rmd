@@ -22,8 +22,7 @@ Answer: Regression is used when we predict outcomes that are quantitative and co
 
 
 ### Question 3: Name two commonly used metrics for regression ML problems. Name two commonly used metrics for classification ML problems.
-Answer: 2 common metrics for regression ML problems are training mean squared error(MSE) and testing mean square error.
-2 common metrics for classification ML problems are Bayes classifier and K-nearest neighbors.
+Answer: 2 common metrics for regression ML problems are training mean squared error and testing mean square error. 2 common metrics for classification ML problems are training error rate and testing error rate.
 
 
 ### Question 4: As discussed, statistical models can be used for different purposes. These purposes can generally be classified into the following three categories. Provide a brief description of each.
@@ -37,15 +36,15 @@ b. Predictive models: goal is to predict outcome with the minimum reducible erro
 ### Question 5: Predictive models are frequently used in machine learning, and they can usually be described as either mechanistic or empirically-driven. Answer the following questions.
 a. Define mechanistic. Define empirically-driven. How do these model types differ? How are they similar?
 
-Answer: Mechanistic refers to theory and how we assume data follows a certain form. Empirically-driven means that we do not make any assumptions about how data is. When using a mechanistic, we may never match the true unknown value of the data. With empirically-driven, we require a many more observations than we would working with a mechanistic model. An empirically-driven model is more flexible by default than a mechanistic model, though we can add parameters to a mechanistic model to help it become more flexible. One similarity between the two models is to be conscious of over fitting, where the model is too sensitive and picks up on noise that does not directly follow a trend. (ideas from lecture 1)
+Answer: Mechanistic refers to theory and how we assume data follows a certain form. Empirically-driven means that we do not make any assumptions about how data is. When using a mechanistic, we may never match the true unknown value of the data. With empirically-driven, we require a many more observations than we would working with a mechanistic model. An empirically-driven model is more flexible by default than a mechanistic model, though we can add parameters to a mechanistic model to help it become more flexible. One similarity between the two models is to be conscious of over fitting, where the model is too sensitive and picks up on noise that might not be consistently part of the trend. (ideas from lecture 1)
 
 b. In general, is a mechanistic or empirically-driven model easier to understand? Explain your choice.
 
-Answer: *TYPE ANSWER HERE*
+Answer: After learning about both types of models, I think the logic behind both are intuitive. However, from a non-statistics background perspective, I would say empirically-driven models are easier to understand. The reason being that we start off with no assumptions about f. We need many observations is because the large amount of information will help test the data, so that we can see what the trends look like. Naturally, because we do not make assumptions about f, it is very flexible by default. I think mechanistic models may be a bit harder for those with no statistics background because they need knowledge on when to use the most common statistical distributions.
 
 c. Describe how the bias-variance trade off is related to the use of mechanistic or empirically-driven models.
 
-Answer: Mean square error (MSE) involves the components of variance and bias. With more flexible models, variance increases and bias decreases. On the other hand, when variance decreases, bias increases. One commonality between both mechanistic and empirically-driven models is the aspect of flexibility. Empirically-driven models are generally flexible by default; While mechanistic models may not be very flexible at first, we can add parameters to make it more flexible. Because of the flexibility in these models, it might not be difficult to eliminate bias. The challenge that concerns both types of models is the bias-variance trade-off. It can be easy to achieve either low variance or low bias, but our goal to find a method that gives both low variance and low bias. 
+Answer: Mean square error (MSE) involves the components of variance and bias. In more flexible models, variance increases and bias decreases. On the other hand, when the model is more restricted, variance decreases and bias increases. One shared characteristic of mechanistic and empirically-driven models is the aspect of flexibility. Empirically-driven models are generally flexible by default while mechanistic models may not be very flexible at first. But we can still add parameters to make it more flexible. The challenge that comes with flexibility is the bias-variance trade-off. It can be easy to achieve either low variance or low bias, but our goal to find a method that gives both low variance and low bias. 
 
 
 ### Question 6: A political candidate’s campaign has collected some detailed voter history data from their constituents. The campaign is interested in two questions. Classify each question as either predictive or inferential. Explain your reasoning for each.
@@ -140,4 +139,4 @@ head(car_corr)
 corrplot(car_corr, type = "lower", method = 'number')
 ```
 
-Answer: cty and hwy are positively correlated, just as we expected from Exercise 2. hwy and cyl are negatively correlated, just as we expected from Exercise 4. The other correlations I have not graphed/tested in previous exercises, but based on their correlation, they seem to all make sense. For example, cty and cyl have negative correlation, cty and displ have negative correlation, so it makes sense that cyl and displ have positive correlation.
+Answer: I see that cty and hwy are positively correlated, just as we expected from Exercise 2. hwy and cyl are negatively correlated, just as we expected from Exercise 4. These two observations are very clear to me. I haven't graphed/tested the other correlations, but looking at the relationships, most seem to make sense. For example, cty and cyl have negative correlation, cty and displ have negative correlation, so it makes sense that cyl and displ have positive correlation. (like in math, negative * negative = positive kind of thought process?) Working backwards with the same though process, since hwy and cty are positive, it makes sense that hwy and cyl are negative and cty and cyl are also negative. The only correlation I don't see a connection to is hwy and displ being negatively correlated.
